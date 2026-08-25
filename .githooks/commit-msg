@@ -1,0 +1,7 @@
+#!/bin/sh
+# Strip Cursor co-author trailers. Do not attribute commits to Cursor.
+msg_file="$1"
+if [ -f "$msg_file" ]; then
+  grep -v -i -E 'Co-authored-by:.*Cursor|cursoragent@cursor\.com' "$msg_file" > "$msg_file.tmp"
+  mv "$msg_file.tmp" "$msg_file"
+fi

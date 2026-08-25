@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Georgia", "Times New Roman", serif;
+
+  --color-ink: #0b1c2c;
+  --color-ink-2: #143049;
+  --color-paper: #f3efe6;
+  --color-cream: #fbfaf6;
+  --color-brass: #9c7c38;
+  --color-brass-dark: #7a5f26;
+  --color-line: #ddd4c4;
+  --color-muted: #5a6370;
+  --color-ok: #1f6b4a;
+  --color-warn: #8a5a12;
+  --color-alert: #9b2c2c;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+h1,
+h2,
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.025em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -40px;
+  z-index: 100;
+  background: var(--color-ink);
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* Production tables inside screens */
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+main thead th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  border-bottom: 1px solid var(--color-line);
+  padding: 10px 12px;
+  background: #f8f5ee;
+}
+main tbody td {
+  padding: 12px;
+  border-bottom: 1px solid var(--color-line);
+  vertical-align: middle;
+}
+main tbody tr:hover td {
+  background: #f7f3ea;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

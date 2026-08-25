@@ -1,0 +1,14 @@
+---
+description: Never attribute git commits to Cursor
+alwaysApply: true
+---
+
+# Git commits — no Cursor co-author
+
+Never add Cursor as an author, committer, or co-author.
+
+- Do not add `Co-authored-by: Cursor` or `cursoragent@cursor.com` to any commit.
+- Do not use `--trailer` that names Cursor.
+- After a commit, if that trailer was injected, amend immediately and remove it before push. The user requested this.
+- Author must remain the user's git identity (Razel Tech / their configured `user.name` and `user.email`).
+- Do not change git config to achieve this.
